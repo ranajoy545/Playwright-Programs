@@ -16,11 +16,14 @@ await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
 await page.locator("input#username").fill("rahulshettyacademy");
 await page.locator("input#password").fill("Learning@830$3mK2");
 await page.locator("input#signInBtn").click();
-const items = page.locator("h4.card-title > a");
+
+ await page.locator(".card-body a").first().waitFor();
+ const titles= await page.locator(".card-body a").allTextContents();
+ console.log(titles);
+ 
 //const firstitem= await page.locator("h4.card-title > a").nth(1).textContent();
 //console.log(firstitem);
-await page.waitForTimeout(5000);
-console.log(await items.allTextContents());
+//console.log(await items.allTextContents());
 
 
 
