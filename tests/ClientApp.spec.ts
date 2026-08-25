@@ -10,5 +10,5 @@ test("test1",async({page})=>{
 //await page.waitForLoadState('networkidle');
 await page.locator(".card-body b").first().waitFor();
 const titles = await page.locator(".card-body b").allTextContents(); 
-console.log(titles); 
+console.log(titles);
 });
