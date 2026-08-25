@@ -9,6 +9,6 @@ test("test1",async({page})=>{
 //  console.log(firstitem);
 //await page.waitForLoadState('networkidle');
 await page.locator(".card-body b").first().waitFor();
-const titles = await page.locator(".card-body b").allTextContents();
+const titles = await page.locator(".card-body b").allTextContents(); 
 console.log(titles); 
 });
