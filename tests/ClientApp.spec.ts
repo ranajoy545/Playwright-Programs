@@ -12,3 +12,4 @@ await page.locator(".card-body b").first().waitFor();
 const titles = await page.locator(".card-body b").allTextContents(); 
 console.log(titles);
 });
+
