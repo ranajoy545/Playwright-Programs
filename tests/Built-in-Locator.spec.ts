@@ -9,8 +9,8 @@ test("built in locator",async({page})=>{
  await page.getByRole("button",{name:"Primary Action"}).click();
  await page.getByText('link', { exact: true }).click();
  await page.waitForTimeout(5000);
- await page.getByText('Submit Form').click();
- await page.waitForTimeout(5000);
+await page.getByText('Submit Form').click();
+await page.waitForTimeout(5000);
 await page.getByLabel("Email Address:").fill("aassd");
 await page.waitForTimeout(5000);
 await page.getByLabel("Password:").fill("Ranajoy@1234");
