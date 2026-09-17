@@ -16,6 +16,9 @@ export default defineConfig({
   /* Run tests in files in parallel */
   fullyParallel: true,
   timeout:30000,
+  expect:{
+    timeout:10 *1000,
+  },
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -33,7 +36,8 @@ export default defineConfig({
     trace: 'on',
     screenshot:"on",
     video:"on",
-    headless:false
+    headless:false,
+    actionTimeout:10000
   },
 
   /* Configure projects for major browsers */
@@ -43,10 +47,10 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
 
     // {
     //   name: 'webkit',
